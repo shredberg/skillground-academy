@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import Hello from "../components/Hello.jsx"
+import Hello from "../components/hello"
 const modules = { Hello }
 
 export default class extends Controller {
