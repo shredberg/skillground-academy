@@ -1,9 +1,4 @@
 <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
 <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
 
-<%= form_with url: session_otp_path do |form| %>
-  <%= form.email_field :email_address, value: @user.email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "Enter your email address" %><br>
-  <%= form.text_field :otp_code, required: true, autocomplete: "current-password", placeholder: "Enter your OTP Code", maxlength: 6 %><br>
-  <%= form.submit "Login" %>
-<% end %>
-
+<%= react_component 'Login', action: session_otp_path, emailAddress: @user.email_address, otp: true %>

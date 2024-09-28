@@ -5,8 +5,7 @@ module ReactHelper
     tag.div(data: {
       controller: "react",
       react_component_value: component_name,
-      react_props_value: props,
-      turbo: false
+      react_props_value: props
     })
   end
 end

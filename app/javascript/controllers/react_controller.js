@@ -2,7 +2,9 @@ import { Controller } from "@hotwired/stimulus"
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from "../components/app"
-const modules = { App }
+import Login from "../components/login"
+
+const modules = { App, Login }
 
 export default class extends Controller {
   static values = {
