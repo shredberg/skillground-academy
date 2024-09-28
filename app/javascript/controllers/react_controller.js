@@ -1,9 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
-import Hello from "../components/hello"
-const modules = { Hello }
+import App from "../components/app"
+const modules = { App }
 
 export default class extends Controller {
   static values = {
@@ -12,8 +11,6 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log('ReactController connected')
-    console.log(this.propsValue)
     const module = modules[this.componentValue]
     if (module) {
       this.root = ReactDOM.createRoot(this.element)
